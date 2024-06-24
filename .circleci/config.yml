@@ -19,14 +19,14 @@ jobs:
       - run:
           name: Build Angular APP
           command: npm run build:prod
-      - run:
-          name: Install ChromeHeadless
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y libappindicator1 fonts-liberation libu2f-udev libvulkan1
-            wget https://dl.google.com/linux/direct/google-chrome-stable_current-amd64.deb
-            sudo dpkg -i google-chrome-stable_current-amd64.deb
-            sudo apt-get install -f
+      # - run:
+      #     name: Install ChromeHeadless
+      #     command: |
+      #       sudo apt-get update
+      #       sudo apt-get install -y libappindicator1 fonts-liberation libu2f-udev libvulkan1
+      #       wget https://dl.google.com/linux/direct/google-chrome-stable_current-amd64.deb
+      #       sudo dpkg -i google-chrome-stable_current-amd64.deb
+      #       sudo apt-get install -f
 
       - run:
           name: Run Unit Test .
