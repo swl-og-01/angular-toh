@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/node:18.20.0-browsers
     steps:
-      - checkout:
+      - checkout
       - restore_cache:
           key: npm-cache-{{ checksum "package-lock.json" }}
       - run:
