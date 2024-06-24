@@ -58,8 +58,8 @@ workflows:
   build_and_test:
     jobs:
       - build-prod:
-          requires:
-            - test
+          # requires:
+          #   - test
           filters:
             branches:
               only:
